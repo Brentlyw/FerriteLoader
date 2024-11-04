@@ -1,11 +1,11 @@
 # Ferrite
-Ferrite is an extemely indirect and obscure rust-based shellcode injector &amp; executor.
+Ferrite is an indirect rust-based shellcode injector &amp; executor.
 
 ## Features
 
 - **Dynamic Nt-Based API Resolution**: Ferrite avoids commonly flagged APIs by dynamically resolving and utilizing `NtAllocateVirtualMemory`, `NtWriteVirtualMemory`, `NtProtectVirtualMemory`, and `RtlCreateUserThread`. These functions are less commonly used than their counterparts in typical injection malware.
 
-- **PEB-Based Function Resolution with Checksum Verification**: Instead of relying on traditional imports, Ferrite locates critical & high-risk functions by traversing the Process Environment Block (PEB) to find addresses within `ntdll.dll`. Each function is identified using custom checksum verification, removing the need for static references to them. This dynamic lookup provides strong stealth against import-based detection methods.
+- **PEB-Based Function Resolution with Checksum Verification**: Instead of relying on traditional imports, Ferrite locates critical & high-risk functions by traversing the Process Environment Block (PEB) to find func addresses within `ntdll.dll`. Each function is identified using custom checksum verification, removing the need for static references to them. This dynamic lookup provides strong stealth against import-based detection methods.
 
 - **Encoded Shellcode Handling**: To bypass shellcode heurustics, Ferrite encodes shellcode using a multi-layered approach. It applies a custom charset, additive feedback loop, and XOR encoding. The encoded shellcode is stored in a `.dat` file and embedded as a resource within the binary, allowing Ferrite to decode and inject it only at runtime, minimizing exposure to memory.
 
@@ -18,7 +18,7 @@ Ferrite is an extemely indirect and obscure rust-based shellcode injector &amp; 
 
 
  ## Sanity check?
- - **No**: I am not sane after writing this for 8+ hours straight.
+ - **No**
 
 
 ## Detection Status
