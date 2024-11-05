@@ -38,4 +38,4 @@ FerriteLoader is an undetected, indirect, and memory safe rust shellcode injecto
 - *Note: Obviously this code can be signatured, but I did my best to remove commonalities of shellcode injection.*
 
 ## Special Thanks
-*A very large special thanks to frank2, who developed the goldberg crate. This helped protect some immediate-use strings, and ints in FerriteLoader.
+*A very large special thanks to frank2, who developed the goldberg crate. This helped protect some immediate-use strings, and ints in FerriteLoader.*
