@@ -36,6 +36,7 @@ FerriteLoader is an undetected, indirect, and memory safe rust shellcode injecto
 ```
 ## Detection Results
 - [Kleenscan Results](https://kleenscan.com/scan_result/303f6dcc05bc0ce7b4d93cc37983acfcfbf90dad54920b16047ee161e35dbd49) (*0/39*)
+- [VirusTotal Results](https://www.virustotal.com/gui/file/26f0a0d029db22924de3685b93e222a36464fdca4122a51de95d71709aad95e7/detection) (*2/72 - 2.7% detection*)
 - *Note: Obviously this code can be signatured, but I did my best to remove commonalities of shellcode injection.*
 
 ## Special Thanks
