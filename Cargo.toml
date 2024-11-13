@@ -1,0 +1,15 @@
+[package]
+name = "Ferrite_Loader"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+winapi = { version = "0.3", features = ["winbase", "processthreadsapi", "handleapi", "memoryapi", "tlhelp32", "libloaderapi", "winnt"] }
+goldberg = "0.1.0"
+
+[profile.release]
+opt-level = "z"            # Optimize for binary size
+lto = "fat"                # Enable Link Time Optimization (LTO) with "fat" for best size reduction
+codegen-units = 1          # Use a single codegen unit for better optimization at the cost of longer compile time
+panic = "abort"            # Disable unwinding to reduce binary size
+strip = true               # Strip symbols from the final binary
